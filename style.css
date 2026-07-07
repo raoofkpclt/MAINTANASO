@@ -159,146 +159,36 @@
   .hero__trust-num{ font-size:22px; font-weight:800; color: var(--green-dark); }
   .hero__trust-label{ font-size:12.5px; color: var(--muted); font-weight:500; }
 
-  /* ---------------- Hero Art Cards ---------------- */
-
-  /* Desktop: 901px and above */
-  .hero__art{
+  /* .hero__art{
     position:relative;
-    display:grid;
-    grid-template-columns:repeat(2, minmax(0, 1fr));
-    gap:16px;
-    align-items:stretch;
-  }
+    display:grid; grid-template-columns: repeat(2, 1fr); gap:16px;
+  } */
+   .hero__art {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 16px;
+}
 
   .art-card{
-    width:100%;
-    height:200px;
-    padding:22px;
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:16px;
-    box-shadow:var(--shadow);
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:10px;
-  }
+    background:#fff; border:1px solid var(--border); border-radius:16px;
+    padding:22px; box-shadow: var(--shadow);
+    display:flex; flex-direction:column; gap:10px;
+    height: 200px;
 
-  .art-card:nth-child(2),
-  .art-card:nth-child(4){
-    margin-top:0;
   }
-
+  .art-card:nth-child(2){ margin-top:2px; }
+  .art-card:nth-child(4){ margin-top:-2px; }
   .art-icon{
-    width:44px;
-    height:44px;
-    min-width:44px;
-    min-height:44px;
-    border-radius:10px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
+    width:44px; height:44px; border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
   }
+  .art-card h4{ font-size:14.5px; font-weight:700; }
+  .art-card p{ font-size:12.5px; color: var(--muted); margin:0; }
 
-  .art-card h4{
-    font-size:14.5px;
-    font-weight:700;
-    margin:0;
-  }
-
-  .art-card p{
-    font-size:12.5px;
-    color:var(--muted);
-    margin:0;
-  }
-
-  /* Tablet: 601px to 900px */
-  @media (min-width:601px) and (max-width:900px){
-    .hero__grid{
-      grid-template-columns:1fr;
-      gap:36px;
-      padding:52px 0 50px;
-    }
-
-    .hero__art{
-      grid-template-columns:repeat(2, minmax(0, 1fr));
-      gap:16px;
-      margin-top:10px;
-    }
-
-    .art-card{
-      height:180px;
-      padding:20px;
-    }
-
-    .art-icon{
-      width:42px;
-      height:42px;
-      min-width:42px;
-      min-height:42px;
-    }
-
-    .art-card h4{ font-size:14px; }
-    .art-card p{ font-size:12px; }
-  }
-
-  /* Mobile: 600px and below */
-  @media (max-width:600px){
-    .hero__grid{
-      grid-template-columns:1fr;
-      gap:28px;
-      padding:36px 0 40px;
-    }
-
-    .hero__art{
-      grid-template-columns:repeat(2, minmax(0, 1fr));
-      gap:10px;
-      margin-top:8px;
-    }
-
-    .art-card{
-      height:150px;
-      padding:14px;
-      gap:8px;
-      border-radius:14px;
-    }
-
-    .art-icon{
-      width:38px;
-      height:38px;
-      min-width:38px;
-      min-height:38px;
-      border-radius:9px;
-    }
-
-    .art-icon svg{
-      width:19px;
-      height:19px;
-    }
-
-    .art-card h4{
-      font-size:13px;
-      line-height:1.3;
-    }
-
-    .art-card p{
-      font-size:11px;
-      line-height:1.4;
-    }
-  }
-
-  /* Very small mobile: 380px and below */
-  @media (max-width:380px){
-    .hero__art{ gap:8px; }
-
-    .art-card{
-      height:145px;
-      padding:12px;
-    }
-
-    .art-card h4{ font-size:12.5px; }
-    .art-card p{ font-size:10.5px; }
+  @media (max-width: 900px){
+    .hero__grid{ grid-template-columns:1fr; padding-top:44px; }
+    .hero__art{ margin-top:20px; }
   }
 
   /* ---------------- Stats strip ---------------- */
