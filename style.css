@@ -75,6 +75,19 @@
   .btn--light:hover{ background: var(--green-light); }
   .btn svg{ flex-shrink:0; }
 
+
+
+  .brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand__logo {
+  height: clamp(32px, 4vw, 45px);
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
   /* ---------------- Navbar ---------------- */
   .navbar{
     position: sticky; top:0; z-index:100;
